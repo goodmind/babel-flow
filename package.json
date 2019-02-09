@@ -1,0 +1,26 @@
+{
+  "name": "babel-flow",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/template": "^7.2.2",
+    "@babel/traverse": "^7.2.3",
+    "execa": "^1.0.0",
+    "fs-extra": "^7.0.1"
+  },
+  "scripts": {
+    "build": "parcel -t node src/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "flow-bin": "^0.92.1"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.92.1",
+    "parcel-bundler": "^1.11.0"
+  }
+}

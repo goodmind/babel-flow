@@ -1,0 +1,4 @@
+// @flow
+
+declare export function parseFile(filename: string): Promise<any>;
+declare export function parseFileSync(filename: string): any;

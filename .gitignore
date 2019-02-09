@@ -1,0 +1,5 @@
+.cache
+.history
+dist/*
+!dist/index.js.flow
+node_modules
