@@ -2,6 +2,7 @@
 
 import execa from "execa";
 import fs from "fs-extra";
+import * as t from "@babel/types";
 import * as parser from "@babel/parser";
 import traverse from "@babel/traverse";
 import template from "@babel/template";
@@ -82,7 +83,7 @@ export function parseFileSync(
   function assignType(path) {
     const symbol = getTypeAtPosSync(path.node.loc.start, filename);
     const type = convertType(symbol.type, plugins);
-    //console.log(symbol.type);
+    //console.log(path.node.type, symbol.type);
     if (type !== "(unknown)") {
       try {
         symbol.type = template.ast(`type S = ${type}`, {
@@ -90,7 +91,7 @@ export function parseFileSync(
         }).right;
         path.node.symbol = symbol;
       } catch (err) {
-        console.error("Error on ", path.node.loc.start, path.node);
+        console.error("Error on ", path.node.loc.start, path.node, path.parent);
         console.error(err);
       }
     }
@@ -98,6 +99,15 @@ export function parseFileSync(
 
   traverse(ast, {
     enter(path) {
+      if (t.isTypeAlias(path.parent)) {
+        return;
+      }
+      if (t.isGenericTypeAnnotation(path.parent)) {
+        return;
+      }
+      if (t.isGenericTypeAnnotation(path.node)) {
+        return;
+      }
       assignType(path);
     }
   });
@@ -129,7 +139,7 @@ export async function parseFile(
   async function assignType(path) {
     const symbol = await getTypeAtPos(path.node.loc.start, filename);
     const type = convertType(symbol.type, plugins);
-    //console.log(symbol);
+    //console.log(path.node.type, symbol.type);
     if (type !== "(unknown)") {
       try {
         symbol.type = template.ast(`type S = ${type}`, {
@@ -137,7 +147,7 @@ export async function parseFile(
         }).right;
         path.node.symbol = symbol;
       } catch (err) {
-        console.error("Error on ", path.node.loc.start, path.node);
+        console.error("Error on ", path.node.loc.start, path.node, path.parent);
         console.error(err);
       }
     }
@@ -145,6 +155,15 @@ export async function parseFile(
 
   traverse(ast, {
     enter(path) {
+      if (t.isTypeAlias(path.parent)) {
+        return;
+      }
+      if (t.isGenericTypeAnnotation(path.parent)) {
+        return;
+      }
+      if (t.isGenericTypeAnnotation(path.node)) {
+        return;
+      }
       promises.push(assignType(path));
     }
   });

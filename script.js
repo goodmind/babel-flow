@@ -4,7 +4,7 @@ const path = require("path");
 
 async function main() {
   const file = parseFileSync(path.join(process.cwd(), process.argv[2]));
-  console.log(file.program);
+  console.log(file.program.body);
 }
 
 main().catch(console.error);
