@@ -48,9 +48,32 @@ function getTypeAtPosExpandedSync(
 
 const plugins = ["flow", "flowComments"];
 
-export function parseFileSync(filename: string) {
+function convertType(type: string, plugins: string[]): string {
+  if (type === "any (explicit)") return "any";
+  if (type === "any (implicit)") return "any";
+  if (type.startsWith("class ")) {
+    const ast = template.ast(`${type} {}`, {
+      plugins
+    });
+    return `typeof ${ast.id.name}`;
+  }
+  return type;
+}
+
+export function parseFileSync(
+  filename: string,
+  {
+    sourceType = "module",
+    plugins = plugins,
+    ...options
+  }: { [key: string]: any } = { sourceType: "module", plugins }
+) {
   const code = fs.readFileSync(filename, { encoding: "utf8" });
-  const ast = parser.parse(code, { plugins });
+  const ast = parser.parse(code, {
+    ...options,
+    plugins,
+    sourceType
+  });
 
   if (flowVersion === null) {
     throw new Error("flow-bin must be installed");
@@ -58,11 +81,18 @@ export function parseFileSync(filename: string) {
 
   function assignType(path) {
     const symbol = getTypeAtPosSync(path.node.loc.start, filename);
-    if (symbol.type !== "(unknown)") {
-      symbol.type = template.ast(`type S = ${symbol.type}`, {
-        plugins
-      }).right;
-      path.node.symbol = symbol;
+    const type = convertType(symbol.type, plugins);
+    //console.log(symbol.type);
+    if (type !== "(unknown)") {
+      try {
+        symbol.type = template.ast(`type S = ${type}`, {
+          plugins
+        }).right;
+        path.node.symbol = symbol;
+      } catch (err) {
+        console.error("Error on ", path.node.loc.start, path.node);
+        console.error(err);
+      }
     }
   }
 
@@ -75,9 +105,20 @@ export function parseFileSync(filename: string) {
   return ast;
 }
 
-export async function parseFile(filename: string) {
+export async function parseFile(
+  filename: string,
+  {
+    sourceType = "module",
+    plugins = plugins,
+    ...options
+  }: { [key: string]: any } = { sourceType: "module", plugins }
+) {
   const code = await fs.readFile(filename, { encoding: "utf8" });
-  const ast = parser.parse(code, { plugins });
+  const ast = parser.parse(code, {
+    ...options,
+    sourceType,
+    plugins
+  });
 
   if (flowVersion === null) {
     throw new Error("flow-bin must be installed");
@@ -87,11 +128,18 @@ export async function parseFile(filename: string) {
 
   async function assignType(path) {
     const symbol = await getTypeAtPos(path.node.loc.start, filename);
-    if (symbol.type !== "(unknown)") {
-      symbol.type = template.ast(`type S = ${symbol.type}`, {
-        plugins
-      }).right;
-      path.node.symbol = symbol;
+    const type = convertType(symbol.type, plugins);
+    //console.log(symbol);
+    if (type !== "(unknown)") {
+      try {
+        symbol.type = template.ast(`type S = ${type}`, {
+          plugins
+        }).right;
+        path.node.symbol = symbol;
+      } catch (err) {
+        console.error("Error on ", path.node.loc.start, path.node);
+        console.error(err);
+      }
     }
   }
 
