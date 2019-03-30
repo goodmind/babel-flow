@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should parse file 1`] = `
+Node {
+  "comments": Array [
+    Object {
+      "end": 7,
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 7,
+          "line": 1,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "start": 0,
+      "type": "CommentLine",
+      "value": "@flow",
+    },
+  ],
+  "end": 40,
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 4,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "program": Node {
+    "body": Array [
+      Node {
+        "declaration": Node {
+          "declarations": Array [
+            Node {
+              "end": 38,
+              "id": Node {
+                "end": 32,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 23,
+                    "line": 3,
+                  },
+                  "identifierName": "magic",
+                  "start": Position {
+                    "column": 13,
+                    "line": 3,
+                  },
+                },
+                "name": "magic",
+                "start": 22,
+                "symbol": Object {
+                  "end": 18,
+                  "endline": 3,
+                  "line": 3,
+                  "loc": Object {
+                    "end": Object {
+                      "column": 18,
+                      "line": 3,
+                      "offset": 27,
+                    },
+                    "source": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
+                    "start": Object {
+                      "column": 14,
+                      "line": 3,
+                      "offset": 22,
+                    },
+                    "type": "SourceFile",
+                  },
+                  "path": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
+                  "reasons": Array [],
+                  "start": 14,
+                  "type": Object {
+                    "loc": undefined,
+                    "type": "AnyTypeAnnotation",
+                  },
+                },
+                "type": "Identifier",
+                "typeAnnotation": Node {
+                  "end": 32,
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 23,
+                      "line": 3,
+                    },
+                    "start": Position {
+                      "column": 18,
+                      "line": 3,
+                    },
+                  },
+                  "start": 27,
+                  "type": "TypeAnnotation",
+                  "typeAnnotation": Node {
+                    "end": 32,
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 23,
+                        "line": 3,
+                      },
+                      "start": Position {
+                        "column": 20,
+                        "line": 3,
+                      },
+                    },
+                    "start": 29,
+                    "type": "AnyTypeAnnotation",
+                  },
+                },
+              },
+              "init": Node {
+                "end": 38,
+                "extra": Object {
+                  "raw": "\\"a\\"",
+                  "rawValue": "a",
+                },
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 29,
+                    "line": 3,
+                  },
+                  "start": Position {
+                    "column": 26,
+                    "line": 3,
+                  },
+                },
+                "start": 35,
+                "type": "StringLiteral",
+                "value": "a",
+              },
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 29,
+                  "line": 3,
+                },
+                "start": Position {
+                  "column": 13,
+                  "line": 3,
+                },
+              },
+              "start": 22,
+              "symbol": Object {
+                "end": 18,
+                "endline": 3,
+                "line": 3,
+                "loc": Object {
+                  "end": Object {
+                    "column": 18,
+                    "line": 3,
+                    "offset": 27,
+                  },
+                  "source": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
+                  "start": Object {
+                    "column": 14,
+                    "line": 3,
+                    "offset": 22,
+                  },
+                  "type": "SourceFile",
+                },
+                "path": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
+                "reasons": Array [],
+                "start": 14,
+                "type": Object {
+                  "loc": undefined,
+                  "type": "AnyTypeAnnotation",
+                },
+              },
+              "type": "VariableDeclarator",
+            },
+          ],
+          "end": 39,
+          "kind": "const",
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 30,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 7,
+              "line": 3,
+            },
+          },
+          "start": 16,
+          "type": "VariableDeclaration",
+        },
+        "end": 39,
+        "exportKind": "value",
+        "leadingComments": Array [
+          Object {
+            "end": 7,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 7,
+                "line": 1,
+              },
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": "@flow",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 30,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 3,
+          },
+        },
+        "source": null,
+        "specifiers": Array [],
+        "start": 9,
+        "type": "ExportNamedDeclaration",
+      },
+    ],
+    "directives": Array [],
+    "end": 40,
+    "interpreter": null,
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 0,
+        "line": 4,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "sourceType": "module",
+    "start": 0,
+    "type": "Program",
+  },
+  "start": 0,
+  "type": "File",
+}
+`;
