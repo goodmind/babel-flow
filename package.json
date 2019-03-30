@@ -11,16 +11,21 @@
     "fs-extra": "^7.0.1"
   },
   "scripts": {
-    "build": "parcel -t node src/index.js"
+    "build": "parcel -t node src/index.js",
+    "test": "jest"
   },
   "files": [
     "dist"
   ],
   "peerDependencies": {
-    "flow-bin": "^0.92.1"
+    "flow-bin": "^0.95.1"
   },
   "devDependencies": {
-    "flow-bin": "^0.92.1",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-jest": "^24.1.0",
+    "effector": "^0.18.2",
+    "jest": "^24.5.0",
     "parcel-bundler": "^1.11.0"
   }
 }
