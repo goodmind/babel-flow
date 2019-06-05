@@ -25,7 +25,9 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-jest": "^24.1.0",
     "effector": "^0.18.2",
+    "flow-bin": "^0.95.1",
     "jest": "^24.5.0",
-    "parcel-bundler": "^1.11.0"
+    "parcel-bundler": "^1.12.3",
+    "pretty-hrtime": "^1.0.3"
   }
 }
