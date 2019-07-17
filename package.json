@@ -7,8 +7,8 @@
     "@babel/core": "^7.2.2",
     "@babel/template": "^7.2.2",
     "@babel/traverse": "^7.2.3",
-    "execa": "^1.0.0",
-    "fs-extra": "^7.0.1"
+    "execa": "^2.0.3",
+    "fs-extra": "^8.1.0"
   },
   "scripts": {
     "build": "parcel -t node src/index.js",
@@ -18,14 +18,15 @@
     "dist"
   ],
   "peerDependencies": {
-    "flow-bin": "^0.95.1"
+    "flow-bin": "^0.102.0"
   },
   "devDependencies": {
+    "@babel/generator": "^7.5.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-flow": "^7.0.0",
     "babel-jest": "^24.1.0",
-    "effector": "^0.18.2",
-    "flow-bin": "^0.95.1",
+    "effector": "^20.0.0",
+    "flow-bin": "^0.102.0",
     "jest": "^24.5.0",
     "parcel-bundler": "^1.12.3",
     "pretty-hrtime": "^1.0.3"
