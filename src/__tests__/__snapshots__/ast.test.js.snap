@@ -96,7 +96,6 @@ Node {
                     "line": 3,
                     "offset": 27,
                   },
-                  "source": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
                   "start": Object {
                     "column": 14,
                     "line": 3,
@@ -104,7 +103,6 @@ Node {
                   },
                   "type": "SourceFile",
                 },
-                "path": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
                 "reasons": Array [],
                 "start": 14,
                 "type": Object {

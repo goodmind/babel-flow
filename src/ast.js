@@ -90,6 +90,11 @@ function convertType(type: string, plugins: string[]): string {
   return type;
 }
 
+function fixSymbol(symbol: any) {
+  delete symbol.path;
+  delete symbol.loc.source;
+}
+
 function skip(path, callback) {
   if (t.isProgram(path.node)) return;
   if (t.isImportDeclaration(path.node)) return;
@@ -207,6 +212,7 @@ export async function parseFile(
         symbol.type = template.ast(`type S = ${type}`, {
           plugins
         }).right;
+        fixSymbol(symbol);
         path.node.symbol = symbol;
         if (t.isIdentifier(path.node)) {
           path.parent.symbol = symbol;
