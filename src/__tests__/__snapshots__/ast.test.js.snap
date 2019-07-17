@@ -20,7 +20,7 @@ Node {
       "value": "@flow",
     },
   ],
-  "end": 40,
+  "end": 35,
   "loc": SourceLocation {
     "end": Position {
       "column": 0,
@@ -37,12 +37,12 @@ Node {
         "declaration": Node {
           "declarations": Array [
             Node {
-              "end": 38,
+              "end": 33,
               "id": Node {
-                "end": 32,
+                "end": 27,
                 "loc": SourceLocation {
                   "end": Position {
-                    "column": 23,
+                    "column": 18,
                     "line": 3,
                   },
                   "identifierName": "magic",
@@ -53,87 +53,31 @@ Node {
                 },
                 "name": "magic",
                 "start": 22,
-                "symbol": Object {
-                  "end": 18,
-                  "endline": 3,
-                  "line": 3,
-                  "loc": Object {
-                    "end": Object {
-                      "column": 18,
-                      "line": 3,
-                      "offset": 27,
-                    },
-                    "source": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
-                    "start": Object {
-                      "column": 14,
-                      "line": 3,
-                      "offset": 22,
-                    },
-                    "type": "SourceFile",
-                  },
-                  "path": "/Users/goodmind/Clouds/MEGAsync/development/web/projects/pending/babel-flow/src/__tests__/magic.js",
-                  "reasons": Array [],
-                  "start": 14,
-                  "type": Object {
-                    "loc": undefined,
-                    "type": "AnyTypeAnnotation",
-                  },
-                },
                 "type": "Identifier",
-                "typeAnnotation": Node {
-                  "end": 32,
-                  "loc": SourceLocation {
-                    "end": Position {
-                      "column": 23,
-                      "line": 3,
-                    },
-                    "start": Position {
-                      "column": 18,
-                      "line": 3,
-                    },
-                  },
-                  "start": 27,
-                  "type": "TypeAnnotation",
-                  "typeAnnotation": Node {
-                    "end": 32,
-                    "loc": SourceLocation {
-                      "end": Position {
-                        "column": 23,
-                        "line": 3,
-                      },
-                      "start": Position {
-                        "column": 20,
-                        "line": 3,
-                      },
-                    },
-                    "start": 29,
-                    "type": "AnyTypeAnnotation",
-                  },
-                },
               },
               "init": Node {
-                "end": 38,
+                "end": 33,
                 "extra": Object {
                   "raw": "\\"a\\"",
                   "rawValue": "a",
                 },
                 "loc": SourceLocation {
                   "end": Position {
-                    "column": 29,
+                    "column": 24,
                     "line": 3,
                   },
                   "start": Position {
-                    "column": 26,
+                    "column": 21,
                     "line": 3,
                   },
                 },
-                "start": 35,
+                "start": 30,
                 "type": "StringLiteral",
                 "value": "a",
               },
               "loc": SourceLocation {
                 "end": Position {
-                  "column": 29,
+                  "column": 24,
                   "line": 3,
                 },
                 "start": Position {
@@ -165,17 +109,17 @@ Node {
                 "start": 14,
                 "type": Object {
                   "loc": undefined,
-                  "type": "AnyTypeAnnotation",
+                  "type": "StringTypeAnnotation",
                 },
               },
               "type": "VariableDeclarator",
             },
           ],
-          "end": 39,
+          "end": 34,
           "kind": "const",
           "loc": SourceLocation {
             "end": Position {
-              "column": 30,
+              "column": 25,
               "line": 3,
             },
             "start": Position {
@@ -186,7 +130,7 @@ Node {
           "start": 16,
           "type": "VariableDeclaration",
         },
-        "end": 39,
+        "end": 34,
         "exportKind": "value",
         "leadingComments": Array [
           Object {
@@ -208,7 +152,7 @@ Node {
         ],
         "loc": SourceLocation {
           "end": Position {
-            "column": 30,
+            "column": 25,
             "line": 3,
           },
           "start": Position {
@@ -223,7 +167,7 @@ Node {
       },
     ],
     "directives": Array [],
-    "end": 40,
+    "end": 35,
     "interpreter": null,
     "loc": SourceLocation {
       "end": Position {
@@ -242,4 +186,9 @@ Node {
   "start": 0,
   "type": "File",
 }
+`;
+
+exports[`should parse file 2`] = `
+"//@flow
+export const magic = \\"a\\";"
 `;

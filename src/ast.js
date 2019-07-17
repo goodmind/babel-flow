@@ -39,6 +39,22 @@ function getTypeAtPosSync(
   return JSON.parse(execa.sync(flow, args).stdout);
 }
 
+async function getTypeAtPosExpanded(
+  { line = 0, column = 0 } = { line: 0, column: 0 },
+  filename: string
+) {
+  const args = [
+    "type-at-pos",
+    "--expand-type-aliases",
+    "--expand-json-output",
+    filename,
+    line,
+    column + 1
+  ];
+  const result = await execa(flow, args);
+  return JSON.parse(result.stdout);
+}
+
 function getTypeAtPosExpandedSync(
   { line = 0, column = 0 } = { line: 0, column: 0 },
   filename: string
@@ -52,6 +68,12 @@ function getTypeAtPosExpandedSync(
     column + 1
   ];
   return JSON.parse(execa.sync(flow, args).stdout);
+}
+
+async function dumpTypes(filename: string) {
+  const args = ["dump-types", "--json", filename];
+  const result = await execa(flow, args);
+  return JSON.parse(result.stdout);
 }
 
 const defaultPlugins = ["flow", "flowComments"];
@@ -91,6 +113,7 @@ function skip(path, callback) {
 
   // Skip all type annotations
   if (t.isTypeAnnotation(path.node)) return;
+  if (t.isAnyTypeAnnotation(path.node)) return;
   if (t.isMixedTypeAnnotation(path.node)) return;
   if (t.isBooleanLiteralTypeAnnotation(path.node)) return;
   if (t.isStringTypeAnnotation(path.node)) return;
@@ -155,6 +178,15 @@ export async function parseFile(
   }: { [key: string]: any } = { sourceType: "module", plugins: defaultPlugins }
 ) {
   const code = await fs.readFile(filename, { encoding: "utf8" });
+  const types = new Map();
+  for (const type of await dumpTypes(filename)) {
+    if (types.has(type.line)) {
+      types.get(type.line).set(type.start - 1, type);
+    } else {
+      types.set(type.line, new Map());
+      types.get(type.line).set(type.start - 1, type);
+    }
+  }
   const ast = parser.parse(code, {
     ...options,
     sourceType,
@@ -164,9 +196,12 @@ export async function parseFile(
   let promises = [];
 
   async function assignType(path) {
-    const symbol = await getTypeAtPos(path.node.loc.start, filename);
+    const symbol = types
+      .get(path.node.loc.start.line)
+      .get(path.node.loc.start.column);
+    if (!symbol) return;
+    if (typeof symbol.type !== "string") return;
     const type = convertType(symbol.type, plugins);
-    //console.log(path.node.type, symbol.type);
     if (type !== "(unknown)") {
       try {
         symbol.type = template.ast(`type S = ${type}`, {

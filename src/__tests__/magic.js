@@ -1,3 +1,3 @@
 //@flow
 
-export const magic: any = "a";
+export const magic = "a";
