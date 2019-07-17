@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should parse file 1`] = `
+exports[`should parse service file 1`] = `
 Node {
   "comments": Array [
     Object {
@@ -19860,6 +19860,1804 @@ Node {
       "end": Position {
         "column": 0,
         "line": 72,
+      },
+      "start": Position {
+        "column": 0,
+        "line": 1,
+      },
+    },
+    "sourceType": "module",
+    "start": 0,
+    "type": "Program",
+  },
+  "start": 0,
+  "type": "File",
+}
+`;
+
+exports[`should parse watch file 1`] = `
+Node {
+  "comments": Array [
+    Object {
+      "end": 8,
+      "loc": SourceLocation {
+        "end": Position {
+          "column": 8,
+          "line": 1,
+        },
+        "start": Position {
+          "column": 0,
+          "line": 1,
+        },
+      },
+      "start": 0,
+      "type": "CommentLine",
+      "value": " @flow",
+    },
+  ],
+  "end": 202,
+  "loc": SourceLocation {
+    "end": Position {
+      "column": 0,
+      "line": 17,
+    },
+    "start": Position {
+      "column": 0,
+      "line": 1,
+    },
+  },
+  "program": Node {
+    "body": Array [
+      Node {
+        "end": 49,
+        "importKind": "value",
+        "leadingComments": Array [
+          Object {
+            "end": 8,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 8,
+                "line": 1,
+              },
+              "start": Position {
+                "column": 0,
+                "line": 1,
+              },
+            },
+            "start": 0,
+            "type": "CommentLine",
+            "value": " @flow",
+          },
+        ],
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 39,
+            "line": 3,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 3,
+          },
+        },
+        "source": Node {
+          "end": 48,
+          "extra": Object {
+            "raw": "\\"effector\\"",
+            "rawValue": "effector",
+          },
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 38,
+              "line": 3,
+            },
+            "start": Position {
+              "column": 28,
+              "line": 3,
+            },
+          },
+          "start": 38,
+          "type": "StringLiteral",
+          "value": "effector",
+        },
+        "specifiers": Array [
+          Node {
+            "end": 30,
+            "importKind": null,
+            "imported": Node {
+              "end": 30,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 20,
+                  "line": 3,
+                },
+                "identifierName": "createEvent",
+                "start": Position {
+                  "column": 9,
+                  "line": 3,
+                },
+              },
+              "name": "createEvent",
+              "start": 19,
+              "type": "Identifier",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 20,
+                "line": 3,
+              },
+              "start": Position {
+                "column": 9,
+                "line": 3,
+              },
+            },
+            "local": Node {
+              "end": 30,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 20,
+                  "line": 3,
+                },
+                "identifierName": "createEvent",
+                "start": Position {
+                  "column": 9,
+                  "line": 3,
+                },
+              },
+              "name": "createEvent",
+              "start": 19,
+              "symbol": Object {
+                "end": 20,
+                "endline": 3,
+                "line": 3,
+                "loc": Object {
+                  "end": Object {
+                    "column": 20,
+                    "line": 3,
+                    "offset": 30,
+                  },
+                  "start": Object {
+                    "column": 10,
+                    "line": 3,
+                    "offset": 19,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 10,
+                "type": Object {
+                  "loc": undefined,
+                  "type": "IntersectionTypeAnnotation",
+                  "types": Array [
+                    Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "loc": undefined,
+                          "name": Object {
+                            "loc": undefined,
+                            "name": "eventName",
+                            "type": "Identifier",
+                          },
+                          "optional": true,
+                          "type": "FunctionTypeParam",
+                          "typeAnnotation": Object {
+                            "loc": undefined,
+                            "type": "StringTypeAnnotation",
+                          },
+                        },
+                      ],
+                      "rest": null,
+                      "returnType": Object {
+                        "id": Object {
+                          "loc": undefined,
+                          "name": "Event",
+                          "type": "Identifier",
+                        },
+                        "loc": undefined,
+                        "type": "GenericTypeAnnotation",
+                        "typeParameters": Object {
+                          "loc": undefined,
+                          "params": Array [
+                            Object {
+                              "id": Object {
+                                "loc": undefined,
+                                "name": "E",
+                                "type": "Identifier",
+                              },
+                              "loc": undefined,
+                              "type": "GenericTypeAnnotation",
+                              "typeParameters": null,
+                            },
+                          ],
+                          "type": "TypeParameterInstantiation",
+                        },
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "bound": undefined,
+                            "loc": undefined,
+                            "name": "E",
+                            "type": "TypeParameter",
+                            "variance": null,
+                          },
+                        ],
+                        "type": "TypeParameterDeclaration",
+                      },
+                    },
+                    Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "loc": undefined,
+                          "name": Object {
+                            "loc": undefined,
+                            "name": "config",
+                            "type": "Identifier",
+                          },
+                          "optional": false,
+                          "type": "FunctionTypeParam",
+                          "typeAnnotation": Object {
+                            "callProperties": Array [],
+                            "exact": false,
+                            "indexers": Array [],
+                            "inexact": false,
+                            "internalSlots": Array [],
+                            "loc": undefined,
+                            "properties": Array [
+                              Object {
+                                "key": Object {
+                                  "loc": undefined,
+                                  "name": "name",
+                                  "type": "Identifier",
+                                },
+                                "kind": "init",
+                                "loc": undefined,
+                                "optional": true,
+                                "proto": false,
+                                "static": false,
+                                "type": "ObjectTypeProperty",
+                                "value": Object {
+                                  "loc": undefined,
+                                  "type": "StringTypeAnnotation",
+                                },
+                                "variance": null,
+                              },
+                            ],
+                            "type": "ObjectTypeAnnotation",
+                          },
+                        },
+                      ],
+                      "rest": null,
+                      "returnType": Object {
+                        "id": Object {
+                          "loc": undefined,
+                          "name": "Event",
+                          "type": "Identifier",
+                        },
+                        "loc": undefined,
+                        "type": "GenericTypeAnnotation",
+                        "typeParameters": Object {
+                          "loc": undefined,
+                          "params": Array [
+                            Object {
+                              "id": Object {
+                                "loc": undefined,
+                                "name": "E",
+                                "type": "Identifier",
+                              },
+                              "loc": undefined,
+                              "type": "GenericTypeAnnotation",
+                              "typeParameters": null,
+                            },
+                          ],
+                          "type": "TypeParameterInstantiation",
+                        },
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "bound": undefined,
+                            "loc": undefined,
+                            "name": "E",
+                            "type": "TypeParameter",
+                            "variance": null,
+                          },
+                        ],
+                        "type": "TypeParameterDeclaration",
+                      },
+                    },
+                  ],
+                },
+              },
+              "type": "Identifier",
+            },
+            "start": 19,
+            "symbol": Object {
+              "end": 20,
+              "endline": 3,
+              "line": 3,
+              "loc": Object {
+                "end": Object {
+                  "column": 20,
+                  "line": 3,
+                  "offset": 30,
+                },
+                "start": Object {
+                  "column": 10,
+                  "line": 3,
+                  "offset": 19,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 10,
+              "type": Object {
+                "loc": undefined,
+                "type": "IntersectionTypeAnnotation",
+                "types": Array [
+                  Object {
+                    "loc": undefined,
+                    "params": Array [
+                      Object {
+                        "loc": undefined,
+                        "name": Object {
+                          "loc": undefined,
+                          "name": "eventName",
+                          "type": "Identifier",
+                        },
+                        "optional": true,
+                        "type": "FunctionTypeParam",
+                        "typeAnnotation": Object {
+                          "loc": undefined,
+                          "type": "StringTypeAnnotation",
+                        },
+                      },
+                    ],
+                    "rest": null,
+                    "returnType": Object {
+                      "id": Object {
+                        "loc": undefined,
+                        "name": "Event",
+                        "type": "Identifier",
+                      },
+                      "loc": undefined,
+                      "type": "GenericTypeAnnotation",
+                      "typeParameters": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "id": Object {
+                              "loc": undefined,
+                              "name": "E",
+                              "type": "Identifier",
+                            },
+                            "loc": undefined,
+                            "type": "GenericTypeAnnotation",
+                            "typeParameters": null,
+                          },
+                        ],
+                        "type": "TypeParameterInstantiation",
+                      },
+                    },
+                    "type": "FunctionTypeAnnotation",
+                    "typeParameters": Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "bound": undefined,
+                          "loc": undefined,
+                          "name": "E",
+                          "type": "TypeParameter",
+                          "variance": null,
+                        },
+                      ],
+                      "type": "TypeParameterDeclaration",
+                    },
+                  },
+                  Object {
+                    "loc": undefined,
+                    "params": Array [
+                      Object {
+                        "loc": undefined,
+                        "name": Object {
+                          "loc": undefined,
+                          "name": "config",
+                          "type": "Identifier",
+                        },
+                        "optional": false,
+                        "type": "FunctionTypeParam",
+                        "typeAnnotation": Object {
+                          "callProperties": Array [],
+                          "exact": false,
+                          "indexers": Array [],
+                          "inexact": false,
+                          "internalSlots": Array [],
+                          "loc": undefined,
+                          "properties": Array [
+                            Object {
+                              "key": Object {
+                                "loc": undefined,
+                                "name": "name",
+                                "type": "Identifier",
+                              },
+                              "kind": "init",
+                              "loc": undefined,
+                              "optional": true,
+                              "proto": false,
+                              "static": false,
+                              "type": "ObjectTypeProperty",
+                              "value": Object {
+                                "loc": undefined,
+                                "type": "StringTypeAnnotation",
+                              },
+                              "variance": null,
+                            },
+                          ],
+                          "type": "ObjectTypeAnnotation",
+                        },
+                      },
+                    ],
+                    "rest": null,
+                    "returnType": Object {
+                      "id": Object {
+                        "loc": undefined,
+                        "name": "Event",
+                        "type": "Identifier",
+                      },
+                      "loc": undefined,
+                      "type": "GenericTypeAnnotation",
+                      "typeParameters": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "id": Object {
+                              "loc": undefined,
+                              "name": "E",
+                              "type": "Identifier",
+                            },
+                            "loc": undefined,
+                            "type": "GenericTypeAnnotation",
+                            "typeParameters": null,
+                          },
+                        ],
+                        "type": "TypeParameterInstantiation",
+                      },
+                    },
+                    "type": "FunctionTypeAnnotation",
+                    "typeParameters": Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "bound": undefined,
+                          "loc": undefined,
+                          "name": "E",
+                          "type": "TypeParameter",
+                          "variance": null,
+                        },
+                      ],
+                      "type": "TypeParameterDeclaration",
+                    },
+                  },
+                ],
+              },
+            },
+            "type": "ImportSpecifier",
+          },
+        ],
+        "start": 10,
+        "type": "ImportDeclaration",
+      },
+      Node {
+        "declarations": Array [
+          Node {
+            "end": 84,
+            "id": Node {
+              "end": 63,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 12,
+                  "line": 5,
+                },
+                "identifierName": "target",
+                "start": Position {
+                  "column": 6,
+                  "line": 5,
+                },
+              },
+              "name": "target",
+              "start": 57,
+              "type": "Identifier",
+            },
+            "init": Node {
+              "end": 84,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 1,
+                  "line": 7,
+                },
+                "start": Position {
+                  "column": 15,
+                  "line": 5,
+                },
+              },
+              "properties": Array [
+                Node {
+                  "async": false,
+                  "body": Node {
+                    "body": Array [],
+                    "directives": Array [],
+                    "end": 82,
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 14,
+                        "line": 6,
+                      },
+                      "start": Position {
+                        "column": 12,
+                        "line": 6,
+                      },
+                    },
+                    "start": 80,
+                    "type": "BlockStatement",
+                  },
+                  "computed": false,
+                  "end": 82,
+                  "generator": false,
+                  "id": null,
+                  "key": Node {
+                    "end": 75,
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 7,
+                        "line": 6,
+                      },
+                      "identifierName": "watch",
+                      "start": Position {
+                        "column": 2,
+                        "line": 6,
+                      },
+                    },
+                    "name": "watch",
+                    "start": 70,
+                    "type": "Identifier",
+                  },
+                  "kind": "method",
+                  "loc": SourceLocation {
+                    "end": Position {
+                      "column": 14,
+                      "line": 6,
+                    },
+                    "start": Position {
+                      "column": 2,
+                      "line": 6,
+                    },
+                  },
+                  "method": true,
+                  "params": Array [
+                    Node {
+                      "end": 78,
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 10,
+                          "line": 6,
+                        },
+                        "identifierName": "fn",
+                        "start": Position {
+                          "column": 8,
+                          "line": 6,
+                        },
+                      },
+                      "name": "fn",
+                      "start": 76,
+                      "symbol": Object {
+                        "end": 10,
+                        "endline": 6,
+                        "line": 6,
+                        "loc": Object {
+                          "end": Object {
+                            "column": 10,
+                            "line": 6,
+                            "offset": 78,
+                          },
+                          "start": Object {
+                            "column": 9,
+                            "line": 6,
+                            "offset": 76,
+                          },
+                          "type": "SourceFile",
+                        },
+                        "reasons": Array [],
+                        "start": 9,
+                        "type": Object {
+                          "loc": undefined,
+                          "params": Array [],
+                          "rest": null,
+                          "returnType": Object {
+                            "loc": undefined,
+                            "type": "VoidTypeAnnotation",
+                          },
+                          "type": "FunctionTypeAnnotation",
+                          "typeParameters": null,
+                        },
+                      },
+                      "type": "Identifier",
+                    },
+                  ],
+                  "start": 70,
+                  "symbol": Object {
+                    "end": 10,
+                    "endline": 6,
+                    "line": 6,
+                    "loc": Object {
+                      "end": Object {
+                        "column": 10,
+                        "line": 6,
+                        "offset": 78,
+                      },
+                      "start": Object {
+                        "column": 9,
+                        "line": 6,
+                        "offset": 76,
+                      },
+                      "type": "SourceFile",
+                    },
+                    "reasons": Array [],
+                    "start": 9,
+                    "type": Object {
+                      "loc": undefined,
+                      "params": Array [],
+                      "rest": null,
+                      "returnType": Object {
+                        "loc": undefined,
+                        "type": "VoidTypeAnnotation",
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": null,
+                    },
+                  },
+                  "type": "ObjectMethod",
+                },
+              ],
+              "start": 66,
+              "symbol": Object {
+                "end": 1,
+                "endline": 7,
+                "line": 5,
+                "loc": Object {
+                  "end": Object {
+                    "column": 1,
+                    "line": 7,
+                    "offset": 84,
+                  },
+                  "start": Object {
+                    "column": 16,
+                    "line": 5,
+                    "offset": 66,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 16,
+                "type": Object {
+                  "callProperties": Array [],
+                  "exact": true,
+                  "indexers": Array [],
+                  "inexact": false,
+                  "internalSlots": Array [],
+                  "loc": undefined,
+                  "properties": Array [
+                    Object {
+                      "key": Object {
+                        "loc": undefined,
+                        "name": "watch",
+                        "type": "Identifier",
+                      },
+                      "kind": "init",
+                      "loc": undefined,
+                      "optional": false,
+                      "proto": false,
+                      "static": false,
+                      "type": "ObjectTypeProperty",
+                      "value": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "loc": undefined,
+                            "name": Object {
+                              "loc": undefined,
+                              "name": "fn",
+                              "type": "Identifier",
+                            },
+                            "optional": false,
+                            "type": "FunctionTypeParam",
+                            "typeAnnotation": Object {
+                              "loc": undefined,
+                              "params": Array [],
+                              "rest": null,
+                              "returnType": Object {
+                                "loc": undefined,
+                                "type": "VoidTypeAnnotation",
+                              },
+                              "type": "FunctionTypeAnnotation",
+                              "typeParameters": null,
+                            },
+                          },
+                        ],
+                        "rest": null,
+                        "returnType": Object {
+                          "loc": undefined,
+                          "type": "VoidTypeAnnotation",
+                        },
+                        "type": "FunctionTypeAnnotation",
+                        "typeParameters": null,
+                      },
+                      "variance": null,
+                    },
+                  ],
+                  "type": "ObjectTypeAnnotation",
+                },
+              },
+              "type": "ObjectExpression",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 1,
+                "line": 7,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 5,
+              },
+            },
+            "start": 57,
+            "symbol": Object {
+              "end": 12,
+              "endline": 5,
+              "line": 5,
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 5,
+                  "offset": 63,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 5,
+                  "offset": 57,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 7,
+              "type": Object {
+                "callProperties": Array [],
+                "exact": true,
+                "indexers": Array [],
+                "inexact": false,
+                "internalSlots": Array [],
+                "loc": undefined,
+                "properties": Array [
+                  Object {
+                    "key": Object {
+                      "loc": undefined,
+                      "name": "watch",
+                      "type": "Identifier",
+                    },
+                    "kind": "init",
+                    "loc": undefined,
+                    "optional": false,
+                    "proto": false,
+                    "static": false,
+                    "type": "ObjectTypeProperty",
+                    "value": Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "loc": undefined,
+                          "name": Object {
+                            "loc": undefined,
+                            "name": "fn",
+                            "type": "Identifier",
+                          },
+                          "optional": false,
+                          "type": "FunctionTypeParam",
+                          "typeAnnotation": Object {
+                            "loc": undefined,
+                            "params": Array [],
+                            "rest": null,
+                            "returnType": Object {
+                              "loc": undefined,
+                              "type": "VoidTypeAnnotation",
+                            },
+                            "type": "FunctionTypeAnnotation",
+                            "typeParameters": null,
+                          },
+                        },
+                      ],
+                      "rest": null,
+                      "returnType": Object {
+                        "loc": undefined,
+                        "type": "VoidTypeAnnotation",
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": null,
+                    },
+                    "variance": null,
+                  },
+                ],
+                "type": "ObjectTypeAnnotation",
+              },
+            },
+            "type": "VariableDeclarator",
+          },
+        ],
+        "end": 85,
+        "kind": "const",
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 2,
+            "line": 7,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 5,
+          },
+        },
+        "start": 51,
+        "type": "VariableDeclaration",
+      },
+      Node {
+        "declarations": Array [
+          Node {
+            "end": 112,
+            "id": Node {
+              "end": 96,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 9,
+                  "line": 9,
+                },
+                "identifierName": "wow",
+                "start": Position {
+                  "column": 6,
+                  "line": 9,
+                },
+              },
+              "name": "wow",
+              "start": 93,
+              "type": "Identifier",
+            },
+            "init": Node {
+              "arguments": Array [],
+              "callee": Node {
+                "end": 110,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 23,
+                    "line": 9,
+                  },
+                  "identifierName": "createEvent",
+                  "start": Position {
+                    "column": 12,
+                    "line": 9,
+                  },
+                },
+                "name": "createEvent",
+                "start": 99,
+                "type": "Identifier",
+              },
+              "end": 112,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 25,
+                  "line": 9,
+                },
+                "start": Position {
+                  "column": 12,
+                  "line": 9,
+                },
+              },
+              "start": 99,
+              "symbol": Object {
+                "end": 25,
+                "endline": 9,
+                "line": 9,
+                "loc": Object {
+                  "end": Object {
+                    "column": 25,
+                    "line": 9,
+                    "offset": 112,
+                  },
+                  "start": Object {
+                    "column": 13,
+                    "line": 9,
+                    "offset": 99,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 13,
+                "type": Object {
+                  "id": Object {
+                    "loc": undefined,
+                    "name": "Event",
+                    "type": "Identifier",
+                  },
+                  "loc": undefined,
+                  "type": "GenericTypeAnnotation",
+                  "typeParameters": Object {
+                    "loc": undefined,
+                    "params": Array [
+                      Object {
+                        "loc": undefined,
+                        "type": "VoidTypeAnnotation",
+                      },
+                    ],
+                    "type": "TypeParameterInstantiation",
+                  },
+                },
+              },
+              "type": "CallExpression",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 25,
+                "line": 9,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 9,
+              },
+            },
+            "start": 93,
+            "symbol": Object {
+              "end": 9,
+              "endline": 9,
+              "line": 9,
+              "loc": Object {
+                "end": Object {
+                  "column": 9,
+                  "line": 9,
+                  "offset": 96,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 9,
+                  "offset": 93,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 7,
+              "type": Object {
+                "id": Object {
+                  "loc": undefined,
+                  "name": "Event",
+                  "type": "Identifier",
+                },
+                "loc": undefined,
+                "type": "GenericTypeAnnotation",
+                "typeParameters": Object {
+                  "loc": undefined,
+                  "params": Array [
+                    Object {
+                      "loc": undefined,
+                      "type": "VoidTypeAnnotation",
+                    },
+                  ],
+                  "type": "TypeParameterInstantiation",
+                },
+              },
+            },
+            "type": "VariableDeclarator",
+          },
+        ],
+        "end": 113,
+        "kind": "const",
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 26,
+            "line": 9,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 9,
+          },
+        },
+        "start": 87,
+        "type": "VariableDeclaration",
+      },
+      Node {
+        "declarations": Array [
+          Node {
+            "end": 141,
+            "id": Node {
+              "end": 125,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 11,
+                  "line": 10,
+                },
+                "identifierName": "event",
+                "start": Position {
+                  "column": 6,
+                  "line": 10,
+                },
+              },
+              "name": "event",
+              "start": 120,
+              "type": "Identifier",
+            },
+            "init": Node {
+              "arguments": Array [],
+              "callee": Node {
+                "end": 139,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 25,
+                    "line": 10,
+                  },
+                  "identifierName": "createEvent",
+                  "start": Position {
+                    "column": 14,
+                    "line": 10,
+                  },
+                },
+                "name": "createEvent",
+                "start": 128,
+                "type": "Identifier",
+              },
+              "end": 141,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 27,
+                  "line": 10,
+                },
+                "start": Position {
+                  "column": 14,
+                  "line": 10,
+                },
+              },
+              "start": 128,
+              "symbol": Object {
+                "end": 27,
+                "endline": 10,
+                "line": 10,
+                "loc": Object {
+                  "end": Object {
+                    "column": 27,
+                    "line": 10,
+                    "offset": 141,
+                  },
+                  "start": Object {
+                    "column": 15,
+                    "line": 10,
+                    "offset": 128,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 15,
+                "type": Object {
+                  "id": Object {
+                    "loc": undefined,
+                    "name": "Event",
+                    "type": "Identifier",
+                  },
+                  "loc": undefined,
+                  "type": "GenericTypeAnnotation",
+                  "typeParameters": Object {
+                    "loc": undefined,
+                    "params": Array [
+                      Object {
+                        "loc": undefined,
+                        "type": "EmptyTypeAnnotation",
+                      },
+                    ],
+                    "type": "TypeParameterInstantiation",
+                  },
+                },
+              },
+              "type": "CallExpression",
+            },
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 27,
+                "line": 10,
+              },
+              "start": Position {
+                "column": 6,
+                "line": 10,
+              },
+            },
+            "start": 120,
+            "symbol": Object {
+              "end": 11,
+              "endline": 10,
+              "line": 10,
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 10,
+                  "offset": 125,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 10,
+                  "offset": 120,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 7,
+              "type": Object {
+                "id": Object {
+                  "loc": undefined,
+                  "name": "Event",
+                  "type": "Identifier",
+                },
+                "loc": undefined,
+                "type": "GenericTypeAnnotation",
+                "typeParameters": Object {
+                  "loc": undefined,
+                  "params": Array [
+                    Object {
+                      "loc": undefined,
+                      "type": "EmptyTypeAnnotation",
+                    },
+                  ],
+                  "type": "TypeParameterInstantiation",
+                },
+              },
+            },
+            "type": "VariableDeclarator",
+          },
+        ],
+        "end": 142,
+        "kind": "const",
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 28,
+            "line": 10,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 10,
+          },
+        },
+        "start": 114,
+        "type": "VariableDeclaration",
+      },
+      Node {
+        "end": 167,
+        "expression": Node {
+          "arguments": Array [
+            Node {
+              "async": false,
+              "body": Node {
+                "body": Array [],
+                "directives": Array [],
+                "end": 165,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 21,
+                    "line": 12,
+                  },
+                  "start": Position {
+                    "column": 19,
+                    "line": 12,
+                  },
+                },
+                "start": 163,
+                "type": "BlockStatement",
+              },
+              "end": 165,
+              "generator": false,
+              "id": null,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 21,
+                  "line": 12,
+                },
+                "start": Position {
+                  "column": 13,
+                  "line": 12,
+                },
+              },
+              "params": Array [],
+              "start": 157,
+              "type": "ArrowFunctionExpression",
+            },
+          ],
+          "callee": Node {
+            "computed": false,
+            "end": 156,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 12,
+                "line": 12,
+              },
+              "start": Position {
+                "column": 0,
+                "line": 12,
+              },
+            },
+            "object": Node {
+              "end": 150,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 6,
+                  "line": 12,
+                },
+                "identifierName": "target",
+                "start": Position {
+                  "column": 0,
+                  "line": 12,
+                },
+              },
+              "name": "target",
+              "start": 144,
+              "type": "Identifier",
+            },
+            "property": Node {
+              "end": 156,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 12,
+                  "line": 12,
+                },
+                "identifierName": "watch",
+                "start": Position {
+                  "column": 7,
+                  "line": 12,
+                },
+              },
+              "name": "watch",
+              "start": 151,
+              "symbol": Object {
+                "end": 12,
+                "endline": 12,
+                "line": 12,
+                "loc": Object {
+                  "end": Object {
+                    "column": 12,
+                    "line": 12,
+                    "offset": 156,
+                  },
+                  "start": Object {
+                    "column": 8,
+                    "line": 12,
+                    "offset": 151,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 8,
+                "type": Object {
+                  "loc": undefined,
+                  "params": Array [
+                    Object {
+                      "loc": undefined,
+                      "name": Object {
+                        "loc": undefined,
+                        "name": "fn",
+                        "type": "Identifier",
+                      },
+                      "optional": false,
+                      "type": "FunctionTypeParam",
+                      "typeAnnotation": Object {
+                        "loc": undefined,
+                        "params": Array [],
+                        "rest": null,
+                        "returnType": Object {
+                          "loc": undefined,
+                          "type": "VoidTypeAnnotation",
+                        },
+                        "type": "FunctionTypeAnnotation",
+                        "typeParameters": null,
+                      },
+                    },
+                  ],
+                  "rest": null,
+                  "returnType": Object {
+                    "loc": undefined,
+                    "type": "VoidTypeAnnotation",
+                  },
+                  "type": "FunctionTypeAnnotation",
+                  "typeParameters": null,
+                },
+              },
+              "type": "Identifier",
+            },
+            "start": 144,
+            "symbol": Object {
+              "end": 12,
+              "endline": 12,
+              "line": 12,
+              "loc": Object {
+                "end": Object {
+                  "column": 12,
+                  "line": 12,
+                  "offset": 156,
+                },
+                "start": Object {
+                  "column": 8,
+                  "line": 12,
+                  "offset": 151,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 8,
+              "type": Object {
+                "loc": undefined,
+                "params": Array [
+                  Object {
+                    "loc": undefined,
+                    "name": Object {
+                      "loc": undefined,
+                      "name": "fn",
+                      "type": "Identifier",
+                    },
+                    "optional": false,
+                    "type": "FunctionTypeParam",
+                    "typeAnnotation": Object {
+                      "loc": undefined,
+                      "params": Array [],
+                      "rest": null,
+                      "returnType": Object {
+                        "loc": undefined,
+                        "type": "VoidTypeAnnotation",
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": null,
+                    },
+                  },
+                ],
+                "rest": null,
+                "returnType": Object {
+                  "loc": undefined,
+                  "type": "VoidTypeAnnotation",
+                },
+                "type": "FunctionTypeAnnotation",
+                "typeParameters": null,
+              },
+            },
+            "type": "MemberExpression",
+          },
+          "end": 166,
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 22,
+              "line": 12,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 12,
+            },
+          },
+          "start": 144,
+          "symbol": Object {
+            "end": 22,
+            "endline": 12,
+            "line": 12,
+            "loc": Object {
+              "end": Object {
+                "column": 22,
+                "line": 12,
+                "offset": 166,
+              },
+              "start": Object {
+                "column": 1,
+                "line": 12,
+                "offset": 144,
+              },
+              "type": "SourceFile",
+            },
+            "reasons": Array [],
+            "start": 1,
+            "type": Object {
+              "loc": undefined,
+              "type": "VoidTypeAnnotation",
+            },
+          },
+          "type": "CallExpression",
+        },
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 23,
+            "line": 12,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 12,
+          },
+        },
+        "start": 144,
+        "type": "ExpressionStatement",
+      },
+      Node {
+        "end": 201,
+        "expression": Node {
+          "arguments": Array [
+            Node {
+              "async": false,
+              "body": Node {
+                "body": Array [
+                  Node {
+                    "end": 197,
+                    "expression": Node {
+                      "arguments": Array [],
+                      "callee": Node {
+                        "end": 194,
+                        "loc": SourceLocation {
+                          "end": Position {
+                            "column": 5,
+                            "line": 15,
+                          },
+                          "identifierName": "wow",
+                          "start": Position {
+                            "column": 2,
+                            "line": 15,
+                          },
+                        },
+                        "name": "wow",
+                        "start": 191,
+                        "type": "Identifier",
+                      },
+                      "end": 196,
+                      "loc": SourceLocation {
+                        "end": Position {
+                          "column": 7,
+                          "line": 15,
+                        },
+                        "start": Position {
+                          "column": 2,
+                          "line": 15,
+                        },
+                      },
+                      "start": 191,
+                      "symbol": Object {
+                        "end": 7,
+                        "endline": 15,
+                        "line": 15,
+                        "loc": Object {
+                          "end": Object {
+                            "column": 7,
+                            "line": 15,
+                            "offset": 196,
+                          },
+                          "start": Object {
+                            "column": 3,
+                            "line": 15,
+                            "offset": 191,
+                          },
+                          "type": "SourceFile",
+                        },
+                        "reasons": Array [],
+                        "start": 3,
+                        "type": Object {
+                          "loc": undefined,
+                          "type": "VoidTypeAnnotation",
+                        },
+                      },
+                      "type": "CallExpression",
+                    },
+                    "loc": SourceLocation {
+                      "end": Position {
+                        "column": 8,
+                        "line": 15,
+                      },
+                      "start": Position {
+                        "column": 2,
+                        "line": 15,
+                      },
+                    },
+                    "start": 191,
+                    "type": "ExpressionStatement",
+                  },
+                ],
+                "directives": Array [],
+                "end": 199,
+                "loc": SourceLocation {
+                  "end": Position {
+                    "column": 1,
+                    "line": 16,
+                  },
+                  "start": Position {
+                    "column": 18,
+                    "line": 14,
+                  },
+                },
+                "start": 187,
+                "type": "BlockStatement",
+              },
+              "end": 199,
+              "generator": false,
+              "id": null,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 1,
+                  "line": 16,
+                },
+                "start": Position {
+                  "column": 12,
+                  "line": 14,
+                },
+              },
+              "params": Array [],
+              "start": 181,
+              "type": "ArrowFunctionExpression",
+            },
+          ],
+          "callee": Node {
+            "computed": false,
+            "end": 180,
+            "loc": SourceLocation {
+              "end": Position {
+                "column": 11,
+                "line": 14,
+              },
+              "start": Position {
+                "column": 0,
+                "line": 14,
+              },
+            },
+            "object": Node {
+              "end": 174,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 5,
+                  "line": 14,
+                },
+                "identifierName": "event",
+                "start": Position {
+                  "column": 0,
+                  "line": 14,
+                },
+              },
+              "name": "event",
+              "start": 169,
+              "type": "Identifier",
+            },
+            "property": Node {
+              "end": 180,
+              "loc": SourceLocation {
+                "end": Position {
+                  "column": 11,
+                  "line": 14,
+                },
+                "identifierName": "watch",
+                "start": Position {
+                  "column": 6,
+                  "line": 14,
+                },
+              },
+              "name": "watch",
+              "start": 175,
+              "symbol": Object {
+                "end": 11,
+                "endline": 14,
+                "line": 14,
+                "loc": Object {
+                  "end": Object {
+                    "column": 11,
+                    "line": 14,
+                    "offset": 180,
+                  },
+                  "start": Object {
+                    "column": 7,
+                    "line": 14,
+                    "offset": 175,
+                  },
+                  "type": "SourceFile",
+                },
+                "reasons": Array [],
+                "start": 7,
+                "type": Object {
+                  "loc": undefined,
+                  "params": Array [
+                    Object {
+                      "loc": undefined,
+                      "name": Object {
+                        "loc": undefined,
+                        "name": "watcher",
+                        "type": "Identifier",
+                      },
+                      "optional": false,
+                      "type": "FunctionTypeParam",
+                      "typeAnnotation": Object {
+                        "loc": undefined,
+                        "params": Array [
+                          Object {
+                            "loc": undefined,
+                            "name": Object {
+                              "loc": undefined,
+                              "name": "payload",
+                              "type": "Identifier",
+                            },
+                            "optional": false,
+                            "type": "FunctionTypeParam",
+                            "typeAnnotation": Object {
+                              "loc": undefined,
+                              "type": "EmptyTypeAnnotation",
+                            },
+                          },
+                        ],
+                        "rest": null,
+                        "returnType": Object {
+                          "loc": undefined,
+                          "type": "AnyTypeAnnotation",
+                        },
+                        "type": "FunctionTypeAnnotation",
+                        "typeParameters": null,
+                      },
+                    },
+                  ],
+                  "rest": null,
+                  "returnType": Object {
+                    "id": Object {
+                      "loc": undefined,
+                      "name": "Subscription",
+                      "type": "Identifier",
+                    },
+                    "loc": undefined,
+                    "type": "GenericTypeAnnotation",
+                    "typeParameters": null,
+                  },
+                  "type": "FunctionTypeAnnotation",
+                  "typeParameters": null,
+                },
+              },
+              "type": "Identifier",
+            },
+            "start": 169,
+            "symbol": Object {
+              "end": 11,
+              "endline": 14,
+              "line": 14,
+              "loc": Object {
+                "end": Object {
+                  "column": 11,
+                  "line": 14,
+                  "offset": 180,
+                },
+                "start": Object {
+                  "column": 7,
+                  "line": 14,
+                  "offset": 175,
+                },
+                "type": "SourceFile",
+              },
+              "reasons": Array [],
+              "start": 7,
+              "type": Object {
+                "loc": undefined,
+                "params": Array [
+                  Object {
+                    "loc": undefined,
+                    "name": Object {
+                      "loc": undefined,
+                      "name": "watcher",
+                      "type": "Identifier",
+                    },
+                    "optional": false,
+                    "type": "FunctionTypeParam",
+                    "typeAnnotation": Object {
+                      "loc": undefined,
+                      "params": Array [
+                        Object {
+                          "loc": undefined,
+                          "name": Object {
+                            "loc": undefined,
+                            "name": "payload",
+                            "type": "Identifier",
+                          },
+                          "optional": false,
+                          "type": "FunctionTypeParam",
+                          "typeAnnotation": Object {
+                            "loc": undefined,
+                            "type": "EmptyTypeAnnotation",
+                          },
+                        },
+                      ],
+                      "rest": null,
+                      "returnType": Object {
+                        "loc": undefined,
+                        "type": "AnyTypeAnnotation",
+                      },
+                      "type": "FunctionTypeAnnotation",
+                      "typeParameters": null,
+                    },
+                  },
+                ],
+                "rest": null,
+                "returnType": Object {
+                  "id": Object {
+                    "loc": undefined,
+                    "name": "Subscription",
+                    "type": "Identifier",
+                  },
+                  "loc": undefined,
+                  "type": "GenericTypeAnnotation",
+                  "typeParameters": null,
+                },
+                "type": "FunctionTypeAnnotation",
+                "typeParameters": null,
+              },
+            },
+            "type": "MemberExpression",
+          },
+          "end": 200,
+          "loc": SourceLocation {
+            "end": Position {
+              "column": 2,
+              "line": 16,
+            },
+            "start": Position {
+              "column": 0,
+              "line": 14,
+            },
+          },
+          "start": 169,
+          "symbol": Object {
+            "end": 2,
+            "endline": 16,
+            "line": 14,
+            "loc": Object {
+              "end": Object {
+                "column": 2,
+                "line": 16,
+                "offset": 200,
+              },
+              "start": Object {
+                "column": 1,
+                "line": 14,
+                "offset": 169,
+              },
+              "type": "SourceFile",
+            },
+            "reasons": Array [],
+            "start": 1,
+            "type": Object {
+              "id": Object {
+                "loc": undefined,
+                "name": "Subscription",
+                "type": "Identifier",
+              },
+              "loc": undefined,
+              "type": "GenericTypeAnnotation",
+              "typeParameters": null,
+            },
+          },
+          "type": "CallExpression",
+        },
+        "loc": SourceLocation {
+          "end": Position {
+            "column": 3,
+            "line": 16,
+          },
+          "start": Position {
+            "column": 0,
+            "line": 14,
+          },
+        },
+        "start": 169,
+        "type": "ExpressionStatement",
+      },
+    ],
+    "directives": Array [],
+    "end": 202,
+    "interpreter": null,
+    "loc": SourceLocation {
+      "end": Position {
+        "column": 0,
+        "line": 17,
       },
       "start": Position {
         "column": 0,
