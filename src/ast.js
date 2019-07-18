@@ -202,11 +202,19 @@ export async function parseFile(
 
   let promises = [];
 
+  function readType(line, startColumn, endColumn) {
+    const startColumns = types.get(line) || new Map();
+    const endColumns = startColumns.get(startColumn) || new Map();
+    return endColumns.get(endColumn);
+  }
+
   async function assignType(path) {
-    const symbol = types
-      .get(path.node.loc.start.line)
-      .get(path.node.loc.start.column)
-      .get(path.node.loc.end.column);
+    const symbol = readType(
+      path.node.loc.start.line,
+      path.node.loc.start.column,
+      path.node.loc.end.column
+    );
+
     if (!symbol) return;
     if (typeof symbol.type !== "string") return;
     const type = convertType(symbol.type, plugins);
