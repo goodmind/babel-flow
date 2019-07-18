@@ -183,14 +183,16 @@ export async function parseFile(
   }: { [key: string]: any } = { sourceType: "module", plugins: defaultPlugins }
 ) {
   const code = await fs.readFile(filename, { encoding: "utf8" });
-  const types = new Map();
+  const types: Map<number, Map<number, Map<number, any>>> = new Map();
   for (const type of await dumpTypes(filename)) {
-    if (types.has(type.line)) {
-      types.get(type.line).set(type.start - 1, type);
-    } else {
-      types.set(type.line, new Map());
-      types.get(type.line).set(type.start - 1, type);
-    }
+    if (type.line !== type.endline) continue;
+    if (!types.has(type.line)) types.set(type.line, new Map());
+    if (!types.get(type.line).has(type.start - 1))
+      types.get(type.line).set(type.start - 1, new Map());
+    types
+      .get(type.line)
+      .get(type.start - 1)
+      .set(type.end, type);
   }
   const ast = parser.parse(code, {
     ...options,
@@ -203,7 +205,8 @@ export async function parseFile(
   async function assignType(path) {
     const symbol = types
       .get(path.node.loc.start.line)
-      .get(path.node.loc.start.column);
+      .get(path.node.loc.start.column)
+      .get(path.node.loc.end.column);
     if (!symbol) return;
     if (typeof symbol.type !== "string") return;
     const type = convertType(symbol.type, plugins);
@@ -214,9 +217,9 @@ export async function parseFile(
         }).right;
         fixSymbol(symbol);
         path.node.symbol = symbol;
-        if (t.isIdentifier(path.node)) {
-          path.parent.symbol = symbol;
-        }
+        // if (t.isIdentifier(path.node)) {
+        //   path.parent.symbol = symbol;
+        // }
       } catch (err) {
         console.error("Error on ", path.node.loc.start, path.node, path.parent);
         console.error(err);
@@ -225,7 +228,10 @@ export async function parseFile(
   }
 
   traverse(ast, {
-    enter(path) {
+    Identifier(path) {
+      promises.push(assignType(path));
+    },
+    enter(path, state) {
       skip(path, () => {
         promises.push(assignType(path));
       });
